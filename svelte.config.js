@@ -5,14 +5,20 @@ export default {
   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
   // for more information about preprocessors
   preprocess: vitePreprocess(),
-	kit: {
-		adapter: adapter({
-			fallback: '404.html'
-		}),
-		paths: {
-			// base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-      base: 'churchplanner'
-		}
-	},
+  // kit: {
+  //   adapter: adapter({
+  //     fallback: '404.html'
+  //   }),
+  //   paths: {
+  //     // base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+  //     base: 'churchplanner'
+  //   }
+  // },
+  kit: {
+    adapter: adapter(),
+    paths: {
+      base: process.env.NODE_ENV === 'production' ? '/churchplanner' : '',
+    }
+  },
 }
 
