@@ -5,7 +5,7 @@
 
     let plugins = [DayGrid, TimeGrid];
     let options = {
-        height: "75dvh",
+        height: "100%",
         headerToolbar: {
             start:'today',
             center: 'title',

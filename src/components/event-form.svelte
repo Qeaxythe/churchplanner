@@ -33,6 +33,11 @@
 </dialog>
 
 <style>
+  dialog {
+    border: 0.15rem outset grey;
+    border-radius: 1rem;
+  }
+
   .label-1 {grid-area: label-1}
   .label-2 {grid-area: label-2}
   .label-3 {grid-area: label-3}
